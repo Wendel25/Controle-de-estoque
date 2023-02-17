@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" type="image/jpg" href="kunai.png">
+    
+    <title>Controle de Venda</title>
+  </head>
+  <body>
+
+    <h2>Controle de Estoque</h2>
+
+    <div class="container">
+      <h4>Estoque atual</h4>
+        <h1 id="balance" class="balance">000</h1>
+
+      <div class="inc-exp-container">
+        <div>
+          <h4>Estoque Comprado</h4>
+          <p type="text" id="money-plus" class="money">000</p>
+        </div>
+
+        <div>
+          <h4>Vendas</h4>
+          <p id="money-minus" type="number" value="000" class="money minus">00</p>
+        </div>
+      </div>
+
+<!------------------------------------------------------------->
+
+    <h3>Adicionar transação</h3>
+
+      <form class="formulario" id="form">
+        <div class="form-control">
+          <label for="text">Nome do Comprador</label>
+          <input class="blockCaracter" type="text" id="text" placeholder="Nome do comprador"/>
+          <br>
+        </div>
+
+        <div class="form-control">
+          <label for="text">Quantidade</label>
+          <input class="blockCaracter" type="number" id="amount" placeholder="Quantidade" />
+      </form>
+        <br>
+
+      <label for="amount">Selecione a opção</label>
+        <button class="option-prohibited">Entrada</button>
+        <button class="option-exit" onclick="exit()" >Saida</button>
+      
+
+<!------------------------------------------------------------->
+      <h3>Total Geral </h3>
+          <ul id="transactions" class="transactions"></ul>
+      
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
